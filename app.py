@@ -52,7 +52,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
     # finally play the auido using the function auto_play 
     with st.chat_message("assistant"):
         with st.spinner("Thinking🤔..."):
-            final_response = gets_answer(st.session_state.messages)
+            final_response = get_answer(st.session_state.messages)
         with st.spinner("Generating audio response..."):    
             audio_file = text_to_speech(final_response)
             autoplay_audio(audio_file)
